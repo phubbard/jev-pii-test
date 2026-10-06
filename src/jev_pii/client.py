@@ -130,6 +130,8 @@ class JevClient:
         """Evaluate ``questions`` against ``state``. Returns a plain dict
         {"model", "answers": {id: answer-dict}, "usage": {...}, "cached": bool} or None on error."""
         payload = {"model": self.model, "state": state, "questions": {k: _dump_q(q) for k, q in questions.items()}}
+        if self.mock:
+            payload["mock"] = True  # keep mock answers out of the live cache
         est_state = estimate_tokens(state)
         if est_state > STATE_TOKEN_BUDGET * 0.9:
             log.warning("state is ~%d tokens, near the %d budget", est_state, STATE_TOKEN_BUDGET)

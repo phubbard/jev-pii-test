@@ -1,0 +1,865 @@
+{
+  "run_id": "20261006-112955-record",
+  "model": "jev-latest",
+  "data_dir": "data",
+  "strategies": [
+    "record"
+  ],
+  "n_records": 600,
+  "n_tables": 30,
+  "batch": 25,
+  "usage": {
+    "mock": false,
+    "requests_sent": 24,
+    "cache_hits": 0,
+    "errors": 0,
+    "input_tokens": 1119523,
+    "output_tokens": 107136,
+    "cost_usd": 0.047,
+    "wall_seconds": 2.16,
+    "latency_ms_p50": 479.4,
+    "latency_ms_p95": 1001.1
+  },
+  "record": {
+    "n_records": 600,
+    "threshold": 0.5,
+    "per_label": {
+      "PERSON_NAME": {
+        "at_threshold": {
+          "tp": 192,
+          "fp": 177,
+          "fn": 48,
+          "tn": 183,
+          "support": 240,
+          "precision": 0.5203,
+          "recall": 0.8,
+          "f1": 0.6305
+        },
+        "sweep": {
+          "threshold": 0.45,
+          "tp": 199,
+          "fp": 188,
+          "fn": 41,
+          "tn": 172,
+          "support": 240,
+          "precision": 0.5142,
+          "recall": 0.8292,
+          "f1": 0.6348
+        },
+        "calibration": {
+          "ece": 0.2119,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 26,
+              "mean_prob": 0.078,
+              "frac_positive": 0.154
+            },
+            {
+              "bin": "0.1-0.2",
+              "n": 71,
+              "mean_prob": 0.142,
+              "frac_positive": 0.211
+            },
+            {
+              "bin": "0.2-0.3",
+              "n": 60,
+              "mean_prob": 0.245,
+              "frac_positive": 0.167
+            },
+            {
+              "bin": "0.3-0.4",
+              "n": 43,
+              "mean_prob": 0.337,
+              "frac_positive": 0.186
+            },
+            {
+              "bin": "0.4-0.5",
+              "n": 31,
+              "mean_prob": 0.451,
+              "frac_positive": 0.355
+            },
+            {
+              "bin": "0.5-0.6",
+              "n": 37,
+              "mean_prob": 0.541,
+              "frac_positive": 0.351
+            },
+            {
+              "bin": "0.6-0.7",
+              "n": 49,
+              "mean_prob": 0.64,
+              "frac_positive": 0.429
+            },
+            {
+              "bin": "0.7-0.8",
+              "n": 70,
+              "mean_prob": 0.746,
+              "frac_positive": 0.4
+            },
+            {
+              "bin": "0.8-0.9",
+              "n": 83,
+              "mean_prob": 0.851,
+              "frac_positive": 0.614
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 130,
+              "mean_prob": 0.953,
+              "frac_positive": 0.608
+            }
+          ]
+        }
+      },
+      "EMAIL": {
+        "at_threshold": {
+          "tp": 88,
+          "fp": 121,
+          "fn": 44,
+          "tn": 347,
+          "support": 132,
+          "precision": 0.4211,
+          "recall": 0.6667,
+          "f1": 0.5161
+        },
+        "sweep": {
+          "threshold": 0.7,
+          "tp": 76,
+          "fp": 69,
+          "fn": 56,
+          "tn": 399,
+          "support": 132,
+          "precision": 0.5241,
+          "recall": 0.5758,
+          "f1": 0.5487
+        },
+        "calibration": {
+          "ece": 0.1891,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 60,
+              "mean_prob": 0.079,
+              "frac_positive": 0.05
+            },
+            {
+              "bin": "0.1-0.2",
+              "n": 142,
+              "mean_prob": 0.144,
+              "frac_positive": 0.092
+            },
+            {
+              "bin": "0.2-0.3",
+              "n": 100,
+              "mean_prob": 0.239,
+              "frac_positive": 0.09
+            },
+            {
+              "bin": "0.3-0.4",
+              "n": 51,
+              "mean_prob": 0.342,
+              "frac_positive": 0.176
+            },
+            {
+              "bin": "0.4-0.5",
+              "n": 38,
+              "mean_prob": 0.443,
+              "frac_positive": 0.263
+            },
+            {
+              "bin": "0.5-0.6",
+              "n": 32,
+              "mean_prob": 0.547,
+              "frac_positive": 0.156
+            },
+            {
+              "bin": "0.6-0.7",
+              "n": 32,
+              "mean_prob": 0.633,
+              "frac_positive": 0.219
+            },
+            {
+              "bin": "0.7-0.8",
+              "n": 42,
+              "mean_prob": 0.745,
+              "frac_positive": 0.381
+            },
+            {
+              "bin": "0.8-0.9",
+              "n": 47,
+              "mean_prob": 0.855,
+              "frac_positive": 0.574
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 56,
+              "mean_prob": 0.945,
+              "frac_positive": 0.589
+            }
+          ]
+        }
+      },
+      "PHONE": {
+        "at_threshold": {
+          "tp": 65,
+          "fp": 100,
+          "fn": 47,
+          "tn": 388,
+          "support": 112,
+          "precision": 0.3939,
+          "recall": 0.5804,
+          "f1": 0.4693
+        },
+        "sweep": {
+          "threshold": 0.45,
+          "tp": 69,
+          "fp": 110,
+          "fn": 43,
+          "tn": 378,
+          "support": 112,
+          "precision": 0.3855,
+          "recall": 0.6161,
+          "f1": 0.4742
+        },
+        "calibration": {
+          "ece": 0.181,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 67,
+              "mean_prob": 0.079,
+              "frac_positive": 0.06
+            },
+            {
+              "bin": "0.1-0.2",
+              "n": 159,
+              "mean_prob": 0.143,
+              "frac_positive": 0.101
+            },
+            {
+              "bin": "0.2-0.3",
+              "n": 98,
+              "mean_prob": 0.243,
+              "frac_positive": 0.092
+            },
+            {
+              "bin": "0.3-0.4",
+              "n": 73,
+              "mean_prob": 0.335,
+              "frac_positive": 0.137
+            },
+            {
+              "bin": "0.4-0.5",
+              "n": 38,
+              "mean_prob": 0.432,
+              "frac_positive": 0.211
+            },
+            {
+              "bin": "0.5-0.6",
+              "n": 28,
+              "mean_prob": 0.543,
+              "frac_positive": 0.214
+            },
+            {
+              "bin": "0.6-0.7",
+              "n": 25,
+              "mean_prob": 0.639,
+              "frac_positive": 0.44
+            },
+            {
+              "bin": "0.7-0.8",
+              "n": 26,
+              "mean_prob": 0.744,
+              "frac_positive": 0.423
+            },
+            {
+              "bin": "0.8-0.9",
+              "n": 40,
+              "mean_prob": 0.855,
+              "frac_positive": 0.375
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 46,
+              "mean_prob": 0.938,
+              "frac_positive": 0.478
+            }
+          ]
+        }
+      },
+      "SSN": {
+        "at_threshold": {
+          "tp": 59,
+          "fp": 94,
+          "fn": 38,
+          "tn": 409,
+          "support": 97,
+          "precision": 0.3856,
+          "recall": 0.6082,
+          "f1": 0.472
+        },
+        "sweep": {
+          "threshold": 0.4,
+          "tp": 70,
+          "fp": 117,
+          "fn": 27,
+          "tn": 386,
+          "support": 97,
+          "precision": 0.3743,
+          "recall": 0.7216,
+          "f1": 0.493
+        },
+        "calibration": {
+          "ece": 0.1817,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 79,
+              "mean_prob": 0.078,
+              "frac_positive": 0.025
+            },
+            {
+              "bin": "0.1-0.2",
+              "n": 194,
+              "mean_prob": 0.141,
+              "frac_positive": 0.072
+            },
+            {
+              "bin": "0.2-0.3",
+              "n": 90,
+              "mean_prob": 0.238,
+              "frac_positive": 0.044
+            },
+            {
+              "bin": "0.3-0.4",
+              "n": 50,
+              "mean_prob": 0.343,
+              "frac_positive": 0.14
+            },
+            {
+              "bin": "0.4-0.5",
+              "n": 34,
+              "mean_prob": 0.447,
+              "frac_positive": 0.324
+            },
+            {
+              "bin": "0.5-0.6",
+              "n": 25,
+              "mean_prob": 0.538,
+              "frac_positive": 0.16
+            },
+            {
+              "bin": "0.6-0.7",
+              "n": 24,
+              "mean_prob": 0.648,
+              "frac_positive": 0.25
+            },
+            {
+              "bin": "0.7-0.8",
+              "n": 31,
+              "mean_prob": 0.752,
+              "frac_positive": 0.419
+            },
+            {
+              "bin": "0.8-0.9",
+              "n": 27,
+              "mean_prob": 0.841,
+              "frac_positive": 0.444
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 46,
+              "mean_prob": 0.948,
+              "frac_positive": 0.522
+            }
+          ]
+        }
+      },
+      "CREDIT_CARD": {
+        "at_threshold": {
+          "tp": 54,
+          "fp": 111,
+          "fn": 29,
+          "tn": 406,
+          "support": 83,
+          "precision": 0.3273,
+          "recall": 0.6506,
+          "f1": 0.4355
+        },
+        "sweep": {
+          "threshold": 0.65,
+          "tp": 47,
+          "fp": 71,
+          "fn": 36,
+          "tn": 446,
+          "support": 83,
+          "precision": 0.3983,
+          "recall": 0.5663,
+          "f1": 0.4677
+        },
+        "calibration": {
+          "ece": 0.2031,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 115,
+              "mean_prob": 0.078,
+              "frac_positive": 0.035
+            },
+            {
+              "bin": "0.1-0.2",
+              "n": 180,
+              "mean_prob": 0.138,
+              "frac_positive": 0.056
+            },
+            {
+              "bin": "0.2-0.3",
+              "n": 76,
+              "mean_prob": 0.24,
+              "frac_positive": 0.092
+            },
+            {
+              "bin": "0.3-0.4",
+              "n": 26,
+              "mean_prob": 0.347,
+              "frac_positive": 0.231
+            },
+            {
+              "bin": "0.4-0.5",
+              "n": 38,
+              "mean_prob": 0.447,
+              "frac_positive": 0.053
+            },
+            {
+              "bin": "0.5-0.6",
+              "n": 34,
+              "mean_prob": 0.539,
+              "frac_positive": 0.118
+            },
+            {
+              "bin": "0.6-0.7",
+              "n": 22,
+              "mean_prob": 0.646,
+              "frac_positive": 0.318
+            },
+            {
+              "bin": "0.7-0.8",
+              "n": 16,
+              "mean_prob": 0.738,
+              "frac_positive": 0.375
+            },
+            {
+              "bin": "0.8-0.9",
+              "n": 56,
+              "mean_prob": 0.85,
+              "frac_positive": 0.321
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 37,
+              "mean_prob": 0.942,
+              "frac_positive": 0.514
+            }
+          ]
+        }
+      },
+      "STREET_ADDRESS": {
+        "at_threshold": {
+          "tp": 61,
+          "fp": 108,
+          "fn": 34,
+          "tn": 397,
+          "support": 95,
+          "precision": 0.3609,
+          "recall": 0.6421,
+          "f1": 0.4621
+        },
+        "sweep": {
+          "threshold": 0.65,
+          "tp": 51,
+          "fp": 67,
+          "fn": 44,
+          "tn": 438,
+          "support": 95,
+          "precision": 0.4322,
+          "recall": 0.5368,
+          "f1": 0.4789
+        },
+        "calibration": {
+          "ece": 0.1889,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 112,
+              "mean_prob": 0.07,
+              "frac_positive": 0.036
+            },
+            {
+              "bin": "0.1-0.2",
+              "n": 142,
+              "mean_prob": 0.139,
+              "frac_positive": 0.07
+            },
+            {
+              "bin": "0.2-0.3",
+              "n": 69,
+              "mean_prob": 0.243,
+              "frac_positive": 0.087
+            },
+            {
+              "bin": "0.3-0.4",
+              "n": 59,
+              "mean_prob": 0.341,
+              "frac_positive": 0.102
+            },
+            {
+              "bin": "0.4-0.5",
+              "n": 49,
+              "mean_prob": 0.445,
+              "frac_positive": 0.163
+            },
+            {
+              "bin": "0.5-0.6",
+              "n": 32,
+              "mean_prob": 0.547,
+              "frac_positive": 0.219
+            },
+            {
+              "bin": "0.6-0.7",
+              "n": 40,
+              "mean_prob": 0.647,
+              "frac_positive": 0.275
+            },
+            {
+              "bin": "0.7-0.8",
+              "n": 43,
+              "mean_prob": 0.748,
+              "frac_positive": 0.395
+            },
+            {
+              "bin": "0.8-0.9",
+              "n": 37,
+              "mean_prob": 0.833,
+              "frac_positive": 0.459
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 17,
+              "mean_prob": 0.929,
+              "frac_positive": 0.529
+            }
+          ]
+        }
+      },
+      "DATE_OF_BIRTH": {
+        "at_threshold": {
+          "tp": 56,
+          "fp": 140,
+          "fn": 36,
+          "tn": 368,
+          "support": 92,
+          "precision": 0.2857,
+          "recall": 0.6087,
+          "f1": 0.3889
+        },
+        "sweep": {
+          "threshold": 0.75,
+          "tp": 39,
+          "fp": 64,
+          "fn": 53,
+          "tn": 444,
+          "support": 92,
+          "precision": 0.3786,
+          "recall": 0.4239,
+          "f1": 0.4
+        },
+        "calibration": {
+          "ece": 0.2273,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 102,
+              "mean_prob": 0.069,
+              "frac_positive": 0.039
+            },
+            {
+              "bin": "0.1-0.2",
+              "n": 126,
+              "mean_prob": 0.143,
+              "frac_positive": 0.071
+            },
+            {
+              "bin": "0.2-0.3",
+              "n": 84,
+              "mean_prob": 0.239,
+              "frac_positive": 0.071
+            },
+            {
+              "bin": "0.3-0.4",
+              "n": 53,
+              "mean_prob": 0.342,
+              "frac_positive": 0.17
+            },
+            {
+              "bin": "0.4-0.5",
+              "n": 39,
+              "mean_prob": 0.445,
+              "frac_positive": 0.205
+            },
+            {
+              "bin": "0.5-0.6",
+              "n": 38,
+              "mean_prob": 0.536,
+              "frac_positive": 0.211
+            },
+            {
+              "bin": "0.6-0.7",
+              "n": 43,
+              "mean_prob": 0.647,
+              "frac_positive": 0.186
+            },
+            {
+              "bin": "0.7-0.8",
+              "n": 27,
+              "mean_prob": 0.75,
+              "frac_positive": 0.222
+            },
+            {
+              "bin": "0.8-0.9",
+              "n": 38,
+              "mean_prob": 0.846,
+              "frac_positive": 0.237
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 50,
+              "mean_prob": 0.944,
+              "frac_positive": 0.5
+            }
+          ]
+        }
+      },
+      "IP_ADDRESS": {
+        "at_threshold": {
+          "tp": 52,
+          "fp": 91,
+          "fn": 40,
+          "tn": 417,
+          "support": 92,
+          "precision": 0.3636,
+          "recall": 0.5652,
+          "f1": 0.4426
+        },
+        "sweep": {
+          "threshold": 0.45,
+          "tp": 59,
+          "fp": 105,
+          "fn": 33,
+          "tn": 403,
+          "support": 92,
+          "precision": 0.3598,
+          "recall": 0.6413,
+          "f1": 0.4609
+        },
+        "calibration": {
+          "ece": 0.1825,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 82,
+              "mean_prob": 0.074,
+              "frac_positive": 0.037
+            },
+            {
+              "bin": "0.1-0.2",
+              "n": 177,
+              "mean_prob": 0.141,
+              "frac_positive": 0.068
+            },
+            {
+              "bin": "0.2-0.3",
+              "n": 93,
+              "mean_prob": 0.245,
+              "frac_positive": 0.075
+            },
+            {
+              "bin": "0.3-0.4",
+              "n": 59,
+              "mean_prob": 0.334,
+              "frac_positive": 0.119
+            },
+            {
+              "bin": "0.4-0.5",
+              "n": 46,
+              "mean_prob": 0.438,
+              "frac_positive": 0.239
+            },
+            {
+              "bin": "0.5-0.6",
+              "n": 42,
+              "mean_prob": 0.546,
+              "frac_positive": 0.19
+            },
+            {
+              "bin": "0.6-0.7",
+              "n": 12,
+              "mean_prob": 0.637,
+              "frac_positive": 0.5
+            },
+            {
+              "bin": "0.7-0.8",
+              "n": 25,
+              "mean_prob": 0.746,
+              "frac_positive": 0.28
+            },
+            {
+              "bin": "0.8-0.9",
+              "n": 26,
+              "mean_prob": 0.859,
+              "frac_positive": 0.269
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 38,
+              "mean_prob": 0.954,
+              "frac_positive": 0.632
+            }
+          ]
+        }
+      }
+    },
+    "micro": {
+      "tp": 627,
+      "fp": 942,
+      "fn": 316,
+      "tn": 2915,
+      "support": 943,
+      "precision": 0.3996,
+      "recall": 0.6649,
+      "f1": 0.4992
+    },
+    "any_pii": {
+      "at_threshold": {
+        "tp": 370,
+        "fp": 123,
+        "fn": 48,
+        "tn": 59,
+        "support": 418,
+        "precision": 0.7505,
+        "recall": 0.8852,
+        "f1": 0.8123
+      },
+      "sweep": {
+        "threshold": 0.15,
+        "tp": 411,
+        "fp": 169,
+        "fn": 7,
+        "tn": 13,
+        "support": 418,
+        "precision": 0.7086,
+        "recall": 0.9833,
+        "f1": 0.8236
+      },
+      "calibration": {
+        "ece": 0.1253,
+        "bins": [
+          {
+            "bin": "0.0-0.1",
+            "n": 9,
+            "mean_prob": 0.078,
+            "frac_positive": 0.333
+          },
+          {
+            "bin": "0.1-0.2",
+            "n": 18,
+            "mean_prob": 0.142,
+            "frac_positive": 0.444
+          },
+          {
+            "bin": "0.2-0.3",
+            "n": 29,
+            "mean_prob": 0.244,
+            "frac_positive": 0.379
+          },
+          {
+            "bin": "0.3-0.4",
+            "n": 30,
+            "mean_prob": 0.342,
+            "frac_positive": 0.533
+          },
+          {
+            "bin": "0.4-0.5",
+            "n": 21,
+            "mean_prob": 0.439,
+            "frac_positive": 0.476
+          },
+          {
+            "bin": "0.5-0.6",
+            "n": 41,
+            "mean_prob": 0.553,
+            "frac_positive": 0.585
+          },
+          {
+            "bin": "0.6-0.7",
+            "n": 48,
+            "mean_prob": 0.645,
+            "frac_positive": 0.792
+          },
+          {
+            "bin": "0.7-0.8",
+            "n": 73,
+            "mean_prob": 0.75,
+            "frac_positive": 0.685
+          },
+          {
+            "bin": "0.8-0.9",
+            "n": 125,
+            "mean_prob": 0.849,
+            "frac_positive": 0.72
+          },
+          {
+            "bin": "0.9-1.0",
+            "n": 206,
+            "mean_prob": 0.95,
+            "frac_positive": 0.816
+          }
+        ]
+      }
+    },
+    "any_pii_by_format": {
+      "json": {
+        "tp": 85,
+        "fp": 22,
+        "fn": 13,
+        "tn": 11,
+        "support": 98,
+        "precision": 0.7944,
+        "recall": 0.8673,
+        "f1": 0.8293
+      },
+      "log": {
+        "tp": 89,
+        "fp": 42,
+        "fn": 15,
+        "tn": 17,
+        "support": 104,
+        "precision": 0.6794,
+        "recall": 0.8558,
+        "f1": 0.7574
+      },
+      "ticket": {
+        "tp": 196,
+        "fp": 59,
+        "fn": 20,
+        "tn": 31,
+        "support": 216,
+        "precision": 0.7686,
+        "recall": 0.9074,
+        "f1": 0.8323
+      }
+    },
+    "records_fully_correct": 142,
+    "records_fully_correct_frac": 0.2367
+  }
+}

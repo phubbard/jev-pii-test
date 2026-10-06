@@ -1,5 +1,7 @@
 # jev-pii
 
+**Results of the live run are in [FINDINGS.md](FINDINGS.md).** Short version: micro-F1 96.5% (record), 98.9% (span), 95.4% column accuracy at one record per request; packing records into one request halves accuracy.
+
 Proof of concept for one question: **can TypeSafe's Jev reliably detect PII in bulk data?**
 
 Jev ([docs](https://docs.typesafe.ai/)) is a "System One" model. It does not generate text.

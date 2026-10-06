@@ -1,0 +1,709 @@
+{
+  "run_id": "20261006-113038-record",
+  "model": "jev-latest",
+  "data_dir": "data",
+  "strategies": [
+    "record"
+  ],
+  "n_records": 600,
+  "n_tables": 30,
+  "batch": 1,
+  "usage": {
+    "mock": false,
+    "requests_sent": 600,
+    "cache_hits": 0,
+    "errors": 0,
+    "input_tokens": 1250947,
+    "output_tokens": 106200,
+    "cost_usd": 0.0525,
+    "wall_seconds": 5.45,
+    "latency_ms_p50": 126.6,
+    "latency_ms_p95": 203.6
+  },
+  "record": {
+    "n_records": 600,
+    "threshold": 0.5,
+    "per_label": {
+      "PERSON_NAME": {
+        "at_threshold": {
+          "tp": 240,
+          "fp": 50,
+          "fn": 0,
+          "tn": 310,
+          "support": 240,
+          "precision": 0.8276,
+          "recall": 1.0,
+          "f1": 0.9057
+        },
+        "sweep": {
+          "threshold": 0.95,
+          "tp": 240,
+          "fp": 3,
+          "fn": 0,
+          "tn": 357,
+          "support": 240,
+          "precision": 0.9877,
+          "recall": 1.0,
+          "f1": 0.9938
+        },
+        "calibration": {
+          "ece": 0.108,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 227,
+              "mean_prob": 0.036,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.1-0.2",
+              "n": 28,
+              "mean_prob": 0.136,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.2-0.3",
+              "n": 18,
+              "mean_prob": 0.257,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.3-0.4",
+              "n": 14,
+              "mean_prob": 0.336,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.4-0.5",
+              "n": 23,
+              "mean_prob": 0.45,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.5-0.6",
+              "n": 13,
+              "mean_prob": 0.544,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.6-0.7",
+              "n": 11,
+              "mean_prob": 0.665,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.7-0.8",
+              "n": 12,
+              "mean_prob": 0.757,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.8-0.9",
+              "n": 9,
+              "mean_prob": 0.827,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 245,
+              "mean_prob": 0.989,
+              "frac_positive": 0.98
+            }
+          ]
+        }
+      },
+      "EMAIL": {
+        "at_threshold": {
+          "tp": 132,
+          "fp": 4,
+          "fn": 0,
+          "tn": 464,
+          "support": 132,
+          "precision": 0.9706,
+          "recall": 1.0,
+          "f1": 0.9851
+        },
+        "sweep": {
+          "threshold": 0.9,
+          "tp": 132,
+          "fp": 0,
+          "fn": 0,
+          "tn": 468,
+          "support": 132,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "calibration": {
+          "ece": 0.0454,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 435,
+              "mean_prob": 0.034,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.1-0.2",
+              "n": 14,
+              "mean_prob": 0.129,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.2-0.3",
+              "n": 6,
+              "mean_prob": 0.263,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.3-0.4",
+              "n": 5,
+              "mean_prob": 0.342,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.4-0.5",
+              "n": 4,
+              "mean_prob": 0.48,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.5-0.6",
+              "n": 1,
+              "mean_prob": 0.58,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.6-0.7",
+              "n": 1,
+              "mean_prob": 0.6,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.7-0.8",
+              "n": 1,
+              "mean_prob": 0.73,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.8-0.9",
+              "n": 1,
+              "mean_prob": 0.86,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 132,
+              "mean_prob": 0.979,
+              "frac_positive": 1.0
+            }
+          ]
+        }
+      },
+      "PHONE": {
+        "at_threshold": {
+          "tp": 111,
+          "fp": 0,
+          "fn": 1,
+          "tn": 488,
+          "support": 112,
+          "precision": 1.0,
+          "recall": 0.9911,
+          "f1": 0.9955
+        },
+        "sweep": {
+          "threshold": 0.2,
+          "tp": 112,
+          "fp": 0,
+          "fn": 0,
+          "tn": 488,
+          "support": 112,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "calibration": {
+          "ece": 0.0418,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 483,
+              "mean_prob": 0.035,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.1-0.2",
+              "n": 5,
+              "mean_prob": 0.132,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.4-0.5",
+              "n": 1,
+              "mean_prob": 0.41,
+              "frac_positive": 1.0
+            },
+            {
+              "bin": "0.5-0.6",
+              "n": 1,
+              "mean_prob": 0.52,
+              "frac_positive": 1.0
+            },
+            {
+              "bin": "0.6-0.7",
+              "n": 1,
+              "mean_prob": 0.66,
+              "frac_positive": 1.0
+            },
+            {
+              "bin": "0.7-0.8",
+              "n": 1,
+              "mean_prob": 0.77,
+              "frac_positive": 1.0
+            },
+            {
+              "bin": "0.8-0.9",
+              "n": 13,
+              "mean_prob": 0.858,
+              "frac_positive": 1.0
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 95,
+              "mean_prob": 0.96,
+              "frac_positive": 1.0
+            }
+          ]
+        }
+      },
+      "SSN": {
+        "at_threshold": {
+          "tp": 96,
+          "fp": 0,
+          "fn": 1,
+          "tn": 503,
+          "support": 97,
+          "precision": 1.0,
+          "recall": 0.9897,
+          "f1": 0.9948
+        },
+        "sweep": {
+          "threshold": 0.3,
+          "tp": 97,
+          "fp": 1,
+          "fn": 0,
+          "tn": 502,
+          "support": 97,
+          "precision": 0.9898,
+          "recall": 1.0,
+          "f1": 0.9949
+        },
+        "calibration": {
+          "ece": 0.0329,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 483,
+              "mean_prob": 0.027,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.1-0.2",
+              "n": 14,
+              "mean_prob": 0.129,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.2-0.3",
+              "n": 5,
+              "mean_prob": 0.256,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.3-0.4",
+              "n": 2,
+              "mean_prob": 0.335,
+              "frac_positive": 0.5
+            },
+            {
+              "bin": "0.5-0.6",
+              "n": 1,
+              "mean_prob": 0.59,
+              "frac_positive": 1.0
+            },
+            {
+              "bin": "0.8-0.9",
+              "n": 9,
+              "mean_prob": 0.841,
+              "frac_positive": 1.0
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 86,
+              "mean_prob": 0.984,
+              "frac_positive": 1.0
+            }
+          ]
+        }
+      },
+      "CREDIT_CARD": {
+        "at_threshold": {
+          "tp": 83,
+          "fp": 0,
+          "fn": 0,
+          "tn": 517,
+          "support": 83,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "sweep": {
+          "threshold": 0.1,
+          "tp": 83,
+          "fp": 0,
+          "fn": 0,
+          "tn": 517,
+          "support": 83,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "calibration": {
+          "ece": 0.0332,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 517,
+              "mean_prob": 0.027,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.7-0.8",
+              "n": 7,
+              "mean_prob": 0.736,
+              "frac_positive": 1.0
+            },
+            {
+              "bin": "0.8-0.9",
+              "n": 13,
+              "mean_prob": 0.848,
+              "frac_positive": 1.0
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 63,
+              "mean_prob": 0.963,
+              "frac_positive": 1.0
+            }
+          ]
+        }
+      },
+      "STREET_ADDRESS": {
+        "at_threshold": {
+          "tp": 94,
+          "fp": 6,
+          "fn": 1,
+          "tn": 499,
+          "support": 95,
+          "precision": 0.94,
+          "recall": 0.9895,
+          "f1": 0.9641
+        },
+        "sweep": {
+          "threshold": 0.5,
+          "tp": 94,
+          "fp": 6,
+          "fn": 1,
+          "tn": 499,
+          "support": 95,
+          "precision": 0.94,
+          "recall": 0.9895,
+          "f1": 0.9641
+        },
+        "calibration": {
+          "ece": 0.0385,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 482,
+              "mean_prob": 0.026,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.1-0.2",
+              "n": 13,
+              "mean_prob": 0.122,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.2-0.3",
+              "n": 2,
+              "mean_prob": 0.23,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.3-0.4",
+              "n": 2,
+              "mean_prob": 0.31,
+              "frac_positive": 0.5
+            },
+            {
+              "bin": "0.4-0.5",
+              "n": 1,
+              "mean_prob": 0.45,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.5-0.6",
+              "n": 5,
+              "mean_prob": 0.558,
+              "frac_positive": 0.8
+            },
+            {
+              "bin": "0.6-0.7",
+              "n": 7,
+              "mean_prob": 0.636,
+              "frac_positive": 0.714
+            },
+            {
+              "bin": "0.7-0.8",
+              "n": 11,
+              "mean_prob": 0.752,
+              "frac_positive": 0.818
+            },
+            {
+              "bin": "0.8-0.9",
+              "n": 22,
+              "mean_prob": 0.85,
+              "frac_positive": 0.955
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 55,
+              "mean_prob": 0.945,
+              "frac_positive": 1.0
+            }
+          ]
+        }
+      },
+      "DATE_OF_BIRTH": {
+        "at_threshold": {
+          "tp": 92,
+          "fp": 0,
+          "fn": 0,
+          "tn": 508,
+          "support": 92,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "sweep": {
+          "threshold": 0.4,
+          "tp": 92,
+          "fp": 0,
+          "fn": 0,
+          "tn": 508,
+          "support": 92,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "calibration": {
+          "ece": 0.0235,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 507,
+              "mean_prob": 0.025,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.3-0.4",
+              "n": 1,
+              "mean_prob": 0.36,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 92,
+              "mean_prob": 0.988,
+              "frac_positive": 1.0
+            }
+          ]
+        }
+      },
+      "IP_ADDRESS": {
+        "at_threshold": {
+          "tp": 92,
+          "fp": 0,
+          "fn": 0,
+          "tn": 508,
+          "support": 92,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "sweep": {
+          "threshold": 0.1,
+          "tp": 92,
+          "fp": 0,
+          "fn": 0,
+          "tn": 508,
+          "support": 92,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "calibration": {
+          "ece": 0.0232,
+          "bins": [
+            {
+              "bin": "0.0-0.1",
+              "n": 508,
+              "mean_prob": 0.025,
+              "frac_positive": 0.0
+            },
+            {
+              "bin": "0.9-1.0",
+              "n": 92,
+              "mean_prob": 0.985,
+              "frac_positive": 1.0
+            }
+          ]
+        }
+      }
+    },
+    "micro": {
+      "tp": 940,
+      "fp": 60,
+      "fn": 3,
+      "tn": 3797,
+      "support": 943,
+      "precision": 0.94,
+      "recall": 0.9968,
+      "f1": 0.9676
+    },
+    "any_pii": {
+      "at_threshold": {
+        "tp": 415,
+        "fp": 12,
+        "fn": 3,
+        "tn": 170,
+        "support": 418,
+        "precision": 0.9719,
+        "recall": 0.9928,
+        "f1": 0.9822
+      },
+      "sweep": {
+        "threshold": 0.6,
+        "tp": 414,
+        "fp": 9,
+        "fn": 4,
+        "tn": 173,
+        "support": 418,
+        "precision": 0.9787,
+        "recall": 0.9904,
+        "f1": 0.9845
+      },
+      "calibration": {
+        "ece": 0.0415,
+        "bins": [
+          {
+            "bin": "0.0-0.1",
+            "n": 109,
+            "mean_prob": 0.045,
+            "frac_positive": 0.009
+          },
+          {
+            "bin": "0.1-0.2",
+            "n": 35,
+            "mean_prob": 0.142,
+            "frac_positive": 0.029
+          },
+          {
+            "bin": "0.2-0.3",
+            "n": 17,
+            "mean_prob": 0.241,
+            "frac_positive": 0.0
+          },
+          {
+            "bin": "0.3-0.4",
+            "n": 10,
+            "mean_prob": 0.329,
+            "frac_positive": 0.1
+          },
+          {
+            "bin": "0.4-0.5",
+            "n": 2,
+            "mean_prob": 0.42,
+            "frac_positive": 0.0
+          },
+          {
+            "bin": "0.5-0.6",
+            "n": 4,
+            "mean_prob": 0.552,
+            "frac_positive": 0.25
+          },
+          {
+            "bin": "0.6-0.7",
+            "n": 8,
+            "mean_prob": 0.647,
+            "frac_positive": 0.5
+          },
+          {
+            "bin": "0.7-0.8",
+            "n": 6,
+            "mean_prob": 0.748,
+            "frac_positive": 0.667
+          },
+          {
+            "bin": "0.8-0.9",
+            "n": 14,
+            "mean_prob": 0.85,
+            "frac_positive": 0.857
+          },
+          {
+            "bin": "0.9-1.0",
+            "n": 395,
+            "mean_prob": 0.98,
+            "frac_positive": 0.997
+          }
+        ]
+      }
+    },
+    "any_pii_by_format": {
+      "json": {
+        "tp": 95,
+        "fp": 0,
+        "fn": 3,
+        "tn": 33,
+        "support": 98,
+        "precision": 1.0,
+        "recall": 0.9694,
+        "f1": 0.9845
+      },
+      "log": {
+        "tp": 104,
+        "fp": 6,
+        "fn": 0,
+        "tn": 53,
+        "support": 104,
+        "precision": 0.9455,
+        "recall": 1.0,
+        "f1": 0.972
+      },
+      "ticket": {
+        "tp": 216,
+        "fp": 6,
+        "fn": 0,
+        "tn": 84,
+        "support": 216,
+        "precision": 0.973,
+        "recall": 1.0,
+        "f1": 0.9863
+      }
+    },
+    "records_fully_correct": 539,
+    "records_fully_correct_frac": 0.8983
+  }
+}

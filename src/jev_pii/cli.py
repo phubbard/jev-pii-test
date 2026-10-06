@@ -113,7 +113,8 @@ def main(argv: list[str] | None = None) -> None:
 
     a = p.parse_args(argv)
     logging.basicConfig(level=logging.DEBUG if a.verbose else logging.INFO, format="%(asctime)s %(levelname)s %(message)s", stream=sys.stderr)
-    logging.getLogger("httpx2").setLevel(logging.WARNING)
+    for noisy in ("httpx2", "typesafe_sdk", "httpcore"):
+        logging.getLogger(noisy).setLevel(logging.WARNING)
     a.func(a)
 
 
